@@ -30,7 +30,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
-
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let photoCell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath:indexPath) as! PhotoViewCell
         loadImageForCell(photos[indexPath.row], imageView: photoCell.imageView)
